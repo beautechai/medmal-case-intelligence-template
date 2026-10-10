@@ -1,0 +1,47 @@
+# ---- PRIVACY: real case data never belongs in a public repo ----
+data/private/
+private/
+*.private.*
+real/
+
+# Documents and media (medical records, photos, recordings) are excluded by default
+*.pdf
+*.PDF
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.heic
+*.tif
+*.tiff
+*.bmp
+*.webp
+*.mp3
+*.m4a
+*.wav
+*.aac
+*.ogg
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.zip
+*.7z
+*.dcm
+*.docx
+*.xlsx
+
+# Generated outputs
+out/
+output/
+*.chart.svg
+
+# Python / OS
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.DS_Store
+Thumbs.db
