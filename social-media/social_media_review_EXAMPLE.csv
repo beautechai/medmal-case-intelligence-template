@@ -1,0 +1,4 @@
+post_id,platform,post_date,locator,content_summary,mentions_provider,mentions_injury_or_activity,risk_rank,risk_reason,preserved,preservation_method,preserved_date,shown_to_counsel,notes
+SM-01,EXAMPLE-platform-A,2030-04-20,[private],EXAMPLE: photo at a family event standing,N,Y,3,Could be cited against claimed mobility limits,Y,account archive + dated screenshot,2030-05-01,Y,EXAMPLE fictional row; do not delete
+SM-02,EXAMPLE-platform-B,2030-03-18,[private],EXAMPLE: post criticizing the hospital by name,Y,Y,4,Discusses providers and fault,Y,account archive,2030-05-01,Y,EXAMPLE
+SM-03,EXAMPLE-platform-A,2030-05-02,[private],EXAMPLE: recovery update consistent with records,N,Y,2,Low,Y,dated screenshot,2030-05-03,N,EXAMPLE

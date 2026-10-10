@@ -1,0 +1,8 @@
+med_id,medication,dose,route,frequency,action,action_date,action_time,actor_role,ordering_role,reason,facility,encounter_id,source_doc_id,page,notes
+MED-01,EXAMPLE-antibiotic-A,1 g,IV,q8h,ordered,2030-03-05,14:10,Hospitalist-A,Hospitalist-A,suspected infection,EXAMPLE General Hospital,EX-ENC-01,DOC-0003,EXGH-0210,EXAMPLE fictional row
+MED-01,EXAMPLE-antibiotic-A,1 g,IV,q8h,verified,2030-03-05,15:02,Pharmacist-1,Hospitalist-A,,EXAMPLE General Hospital,EX-ENC-01,DOC-0003,EXGH-0211,EXAMPLE
+MED-01,EXAMPLE-antibiotic-A,1 g,IV,q8h,given,2030-03-05,19:45,RN-1,Hospitalist-A,,EXAMPLE General Hospital,EX-ENC-01,DOC-0003,EXGH-0402,EXAMPLE: first dose ~5.5 h after order
+MED-01,EXAMPLE-antibiotic-A,1 g,IV,q8h,held,2030-03-06,04:00,RN-2,Hospitalist-A,patient off unit,EXAMPLE General Hospital,EX-ENC-01,DOC-0003,EXGH-0403,EXAMPLE
+MED-01,EXAMPLE-antibiotic-A,1 g,IV,q8h,discontinued,2030-03-09,10:00,Surgeon-A,Hospitalist-A,changed per culture,EXAMPLE General Hospital,EX-ENC-01,DOC-0003,EXGH-0260,EXAMPLE
+MED-02,EXAMPLE-anticoagulant-B,40 mg,SC,daily,ordered,2030-03-02,18:00,Surgeon-A,Surgeon-A,DVT prophylaxis,EXAMPLE General Hospital,EX-ENC-01,DOC-0003,EXGH-0150,EXAMPLE
+MED-02,EXAMPLE-anticoagulant-B,40 mg,SC,daily,not_given,2030-03-03,09:00,RN-3,Surgeon-A,no reason documented,EXAMPLE General Hospital,EX-ENC-01,DOC-0003,EXGH-0398,EXAMPLE: question for counsel

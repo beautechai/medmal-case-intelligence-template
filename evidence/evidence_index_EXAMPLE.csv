@@ -1,0 +1,4 @@
+doc_id,title,doc_type,author_role,facility,date,bates_start,bates_end,private_location,sha256,relevance,linked_ids,notes
+DOC-0003,EXAMPLE certified chart (fictional),medical record,HIM custodian,EXAMPLE General Hospital,2030-05-20,EXGH-0001,EXGH-0612,data/private/EXAMPLE_certified_chart.pdf,0000000000000000000000000000000000000000000000000000000000000000,Primary chart,PROC-02;MED-01,EXAMPLE placeholder hash
+DOC-0005,EXAMPLE EHR audit trail (fictional),audit log,HIM custodian,EXAMPLE General Hospital,2030-06-10,EXGH-AUD-0001,EXGH-AUD-0088,data/private/EXAMPLE_audit_log.csv,1111111111111111111111111111111111111111111111111111111111111111,Shows op-note filing lag,PROC-03,EXAMPLE placeholder hash
+DOC-0010,EXAMPLE email from facility rep (fictional),email,Facility-Rep-1,EXAMPLE General Hospital,2030-03-14,,,data/private/EXAMPLE_email.eml,2222222222222222222222222222222222222222222222222222222222222222,Confirms rep's actual role,EV-01,EXAMPLE placeholder hash

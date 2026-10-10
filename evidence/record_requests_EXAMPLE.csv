@@ -1,0 +1,5 @@
+request_id,facility,department,records_requested,legal_basis,method,requested_date,sent_date,due_date,followup_date,received_date,pages_received,certified,certification_date,gaps_identified,status,notes
+REQ-001,EXAMPLE General Hospital,HIM,Complete chart EX-ENC-01 incl. nursing; MAR; anesthesia; imaging,45 CFR 164.524; CA H&S 123100 et seq.,mail,2030-04-01,2030-04-02,2030-05-02,2030-05-03,2030-05-20,612,Y,2030-05-18,Bates EXGH-0301 to 0315 missing; no rapid-response record,partial,EXAMPLE fictional row
+REQ-002,EXAMPLE General Hospital,audit_trail,Audit trail + all note versions EX-ENC-01,45 CFR 164.524 / 164.528,email,2030-04-10,2030-04-10,2030-05-10,2030-05-11,2030-06-10,88,Y,2030-06-08,No access log included,partial,EXAMPLE
+REQ-003,EXAMPLE Rehab Center,HIM,Complete chart EX-ENC-02,45 CFR 164.524,portal,2030-04-01,2030-04-01,2030-05-01,,2030-05-28,198,Y,2030-05-27,,complete,EXAMPLE
+REQ-004,EXAMPLE General Hospital,HIM,Missing Bates EXGH-0301 to 0315; rapid-response record,45 CFR 164.524,mail,2030-05-22,2030-05-23,2030-06-22,,,,,,,open,EXAMPLE follow-up for gaps in REQ-001
