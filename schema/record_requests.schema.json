@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "record_requests.schema.json",
+  "title": "record_requests",
+  "description": "Tracker for certified-record and audit-trail requests. Each CSV row is validated as one object.",
+  "type": "object",
+  "properties": {
+    "request_id": {"description": "Unique ID", "type": "string"},
+    "facility": {"description": "Facility", "type": "string"},
+    "department": {"description": "HIM, radiology, billing, pharmacy, audit_trail, other", "type": "string"},
+    "records_requested": {"description": "What was requested (date ranges, record types)", "type": "string"},
+    "legal_basis": {"description": "e.g. HIPAA right of access 45 CFR 164.524; CA H&S Code 123100 et seq.; subpoena", "type": "string"},
+    "method": {"description": "portal, mail, fax, email, in_person, subpoena", "type": "string"},
+    "requested_date": {"description": "Date the request was prepared (YYYY-MM-DD)", "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"},
+    "sent_date": {"description": "Date sent (YYYY-MM-DD)", "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"},
+    "due_date": {"description": "Date response is due (YYYY-MM-DD)", "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"},
+    "followup_date": {"description": "Next follow-up (YYYY-MM-DD)", "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"},
+    "received_date": {"description": "Date received (YYYY-MM-DD)", "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"},
+    "pages_received": {"description": "Pages received", "type": ["integer", "null"]},
+    "certified": {"description": "Certified copy received?", "type": "string", "enum": ["Y", "N", "unknown", ""]},
+    "certification_date": {"description": "Date on custodian certification (YYYY-MM-DD)", "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"},
+    "gaps_identified": {"description": "Missing items found on review", "type": "string"},
+    "status": {"description": "open, partial, complete, overdue, escalated", "type": "string"},
+    "notes": {"description": "Free text", "type": "string"}
+  },
+  "required": ["request_id", "facility"],
+  "additionalProperties": true
+}

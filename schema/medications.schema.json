@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medications.schema.json",
+  "title": "medications",
+  "description": "One row per medication action (order, administration, hold, discontinue). Each CSV row is validated as one object.",
+  "type": "object",
+  "properties": {
+    "med_id": {"description": "ID grouping actions for the same order", "type": "string"},
+    "medication": {"description": "Drug name", "type": "string"},
+    "dose": {"description": "Dose", "type": "string"},
+    "route": {"description": "PO, IV, SC, etc.", "type": "string"},
+    "frequency": {"description": "Ordered frequency", "type": "string"},
+    "action": {"description": "What happened", "type": "string", "enum": ["ordered", "verified", "given", "held", "refused", "not_given", "discontinued", "changed", ""]},
+    "action_date": {"description": "Date of the action (YYYY-MM-DD)", "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"},
+    "action_time": {"description": "Time HH:MM", "type": "string"},
+    "actor_role": {"description": "Role of person acting (e.g. RN-1, Hospitalist-A, Pharmacist-1)", "type": "string"},
+    "ordering_role": {"description": "Role of ordering clinician", "type": "string"},
+    "reason": {"description": "Documented reason (hold reason, discontinue reason)", "type": "string"},
+    "facility": {"description": "Facility", "type": "string"},
+    "encounter_id": {"description": "Encounter", "type": "string"},
+    "source_doc_id": {"description": "Source document", "type": "string"},
+    "page": {"description": "Page or Bates", "type": "string"},
+    "notes": {"description": "Free text", "type": "string"}
+  },
+  "required": ["med_id", "medication", "action", "action_date"],
+  "additionalProperties": true
+}

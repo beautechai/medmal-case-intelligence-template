@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "labs.schema.json",
+  "title": "labs",
+  "description": "One row per analyte result. Each CSV row is validated as one object.",
+  "type": "object",
+  "properties": {
+    "facility": {"description": "Facility that drew/resulted the lab", "type": "string"},
+    "encounter_id": {"description": "Encounter identifier", "type": "string"},
+    "collected_date": {"description": "Specimen collection date (YYYY-MM-DD)", "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"},
+    "collected_time": {"description": "Collection time HH:MM (24h)", "type": "string"},
+    "analyte": {"description": "Analyte name, normalized (e.g. WBC, Hemoglobin, Creatinine, Lactate)", "type": "string"},
+    "value": {"description": "Numeric result (leave blank if non-numeric; put text in notes)", "type": ["number", "null"]},
+    "unit": {"description": "Unit", "type": "string"},
+    "ref_low": {"description": "Reference range low", "type": ["number", "null"]},
+    "ref_high": {"description": "Reference range high", "type": ["number", "null"]},
+    "flag": {"description": "H, L, critical, etc.", "type": "string"},
+    "specimen": {"description": "Blood, urine, wound, etc.", "type": "string"},
+    "source_doc_id": {"description": "evidence/record doc_id", "type": "string"},
+    "page": {"description": "Page or Bates", "type": "string"},
+    "notes": {"description": "Free text", "type": "string"}
+  },
+  "required": ["facility", "collected_date", "analyte"],
+  "additionalProperties": true
+}

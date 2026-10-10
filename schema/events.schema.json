@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "events.schema.json",
+  "title": "events",
+  "description": "Intimidation, role-misidentification, retaliation and conflict-of-interest log. Each CSV row is validated as one object.",
+  "type": "object",
+  "properties": {
+    "event_id": {"description": "Unique ID", "type": "string"},
+    "date": {"description": "Date (YYYY-MM-DD)", "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"},
+    "time": {"description": "HH:MM", "type": "string"},
+    "location": {"description": "Where it happened", "type": "string"},
+    "channel": {"description": "How", "type": "string", "enum": ["in_person", "phone", "email", "letter", "portal", "text", "other", ""]},
+    "person_role": {"description": "Role/placeholder of the person (e.g. Facility-Rep-1)", "type": "string"},
+    "stated_role": {"description": "Role the person claimed", "type": "string"},
+    "actual_role_verified": {"description": "Role confirmed later and how", "type": "string"},
+    "role_misidentified": {"description": "Did they misstate their role?", "type": "string", "enum": ["Y", "N", "unknown", ""]},
+    "category": {"description": "Type", "type": "string", "enum": ["intimidation", "threat", "role_misrepresentation", "conflict_of_interest", "retaliation", "records_obstruction", "other", ""]},
+    "description": {"description": "Factual description, as close to verbatim as possible", "type": "string"},
+    "witnesses": {"description": "Witness roles", "type": "string"},
+    "contemporaneous_note": {"description": "Was a note written at or near the time?", "type": "string", "enum": ["Y", "N", "unknown", ""]},
+    "evidence_doc_id": {"description": "Linked evidence doc_id", "type": "string"},
+    "reported_to": {"description": "Agency/office reported to, if any", "type": "string"},
+    "reported_date": {"description": "Date reported (YYYY-MM-DD)", "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"},
+    "notes": {"description": "Free text", "type": "string"}
+  },
+  "required": ["event_id", "date", "category", "description"],
+  "additionalProperties": true
+}

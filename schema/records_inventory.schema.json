@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "records_inventory.schema.json",
+  "title": "records_inventory",
+  "description": "One row per document or production set received. Each CSV row is validated as one object.",
+  "type": "object",
+  "properties": {
+    "doc_id": {"description": "Unique ID you assign, e.g. DOC-0001", "type": "string"},
+    "facility": {"description": "Facility or provider (role/placeholder in shared copies)", "type": "string"},
+    "source_type": {"description": "How you got it", "type": "string", "enum": ["portal", "production", "certified", "subpoena", "patient_copy", "other", ""]},
+    "request_id": {"description": "Link to evidence/record_requests request_id", "type": "string"},
+    "doc_type": {"description": "e.g. discharge summary, op note, MAR, nursing notes, labs, imaging report, audit log", "type": "string"},
+    "encounter_id": {"description": "Encounter/admission identifier or placeholder", "type": "string"},
+    "date_of_service_start": {"description": "First date of service covered (YYYY-MM-DD)", "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"},
+    "date_of_service_end": {"description": "Last date of service covered (YYYY-MM-DD)", "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"},
+    "bates_start": {"description": "First Bates number or page label", "type": "string"},
+    "bates_end": {"description": "Last Bates number or page label", "type": "string"},
+    "page_count": {"description": "Pages in the file", "type": ["integer", "null"]},
+    "file_name": {"description": "File name in data/private/ (never committed)", "type": "string"},
+    "received_date": {"description": "Date received (YYYY-MM-DD)", "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"},
+    "certified": {"description": "Accompanied by custodian certification/declaration", "type": "string", "enum": ["Y", "N", "unknown", ""]},
+    "notes": {"description": "Free text", "type": "string"}
+  },
+  "required": ["doc_id", "facility", "source_type"],
+  "additionalProperties": true
+}

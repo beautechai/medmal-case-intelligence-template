@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evidence_index.schema.json",
+  "title": "evidence_index",
+  "description": "Master index of every item of evidence. Each CSV row is validated as one object.",
+  "type": "object",
+  "properties": {
+    "doc_id": {"description": "Unique ID used everywhere else", "type": "string"},
+    "title": {"description": "Short descriptive title", "type": "string"},
+    "doc_type": {"description": "Record, photo, letter, email, audit log, recording, etc.", "type": "string"},
+    "author_role": {"description": "Author role", "type": "string"},
+    "facility": {"description": "Facility", "type": "string"},
+    "date": {"description": "Document date (YYYY-MM-DD)", "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"},
+    "bates_start": {"description": "First Bates/page label", "type": "string"},
+    "bates_end": {"description": "Last Bates/page label", "type": "string"},
+    "private_location": {"description": "Where the file lives (in data/private/, never committed)", "type": "string"},
+    "sha256": {"description": "SHA-256 hash of the file for integrity", "type": "string"},
+    "relevance": {"description": "Why it matters", "type": "string"},
+    "linked_ids": {"description": "IDs in other tables this supports", "type": "string"},
+    "notes": {"description": "Free text", "type": "string"}
+  },
+  "required": ["doc_id", "title"],
+  "additionalProperties": true
+}

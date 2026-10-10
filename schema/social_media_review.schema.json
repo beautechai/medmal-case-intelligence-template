@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "social_media_review.schema.json",
+  "title": "social_media_review",
+  "description": "Ranked risk review of the patient's/family's own posts. Preserve; do not delete. Each CSV row is validated as one object.",
+  "type": "object",
+  "properties": {
+    "post_id": {"description": "Unique ID", "type": "string"},
+    "platform": {"description": "Platform", "type": "string"},
+    "post_date": {"description": "Date posted (YYYY-MM-DD)", "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"},
+    "locator": {"description": "URL or how to find it (keep private)", "type": "string"},
+    "content_summary": {"description": "Neutral summary", "type": "string"},
+    "mentions_provider": {"description": "Mentions a provider/facility", "type": "string", "enum": ["Y", "N", "unknown", ""]},
+    "mentions_injury_or_activity": {"description": "Mentions injury, symptoms, physical activity, or travel", "type": "string", "enum": ["Y", "N", "unknown", ""]},
+    "risk_rank": {"description": "1 (low) to 5 (high)", "type": ["integer", "null"]},
+    "risk_reason": {"description": "Why it could be used against the claim", "type": "string"},
+    "preserved": {"description": "Preserved (screenshot/export)?", "type": "string", "enum": ["Y", "N", "unknown", ""]},
+    "preservation_method": {"description": "Platform export, screenshot with URL and timestamp, etc.", "type": "string"},
+    "preserved_date": {"description": "Date preserved (YYYY-MM-DD)", "type": "string", "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"},
+    "shown_to_counsel": {"description": "Shown to counsel?", "type": "string", "enum": ["Y", "N", "unknown", ""]},
+    "notes": {"description": "Free text", "type": "string"}
+  },
+  "required": ["post_id", "platform"],
+  "additionalProperties": true
+}
