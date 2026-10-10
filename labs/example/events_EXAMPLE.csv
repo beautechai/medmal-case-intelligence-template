@@ -1,0 +1,6 @@
+date,label,category
+2030-03-02,EXAMPLE Surgery 1,surgery
+2030-03-06,EXAMPLE Return to OR,complication
+2030-03-08,EXAMPLE Wound VAC placed,procedure
+2030-03-15,EXAMPLE Transfer to rehab,transfer
+2030-03-24,EXAMPLE Discharge home,discharge
