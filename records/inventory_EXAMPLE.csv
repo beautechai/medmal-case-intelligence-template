@@ -1,0 +1,5 @@
+doc_id,facility,source_type,request_id,doc_type,encounter_id,date_of_service_start,date_of_service_end,bates_start,bates_end,page_count,file_name,received_date,certified,notes
+DOC-0001,EXAMPLE General Hospital,portal,,visit summaries,EX-ENC-01,2030-03-01,2030-03-15,,,42,EXAMPLE_portal_export.pdf,2030-04-02,N,EXAMPLE fictional row: portal export lacks nursing notes
+DOC-0003,EXAMPLE General Hospital,certified,REQ-001,complete chart incl. labs,EX-ENC-01,2030-03-01,2030-03-15,EXGH-0001,EXGH-0612,612,EXAMPLE_certified_chart.pdf,2030-05-20,Y,EXAMPLE: Bates gap EXGH-0301 to EXGH-0315
+DOC-0005,EXAMPLE General Hospital,production,REQ-002,EHR audit trail,EX-ENC-01,2030-03-01,2030-03-15,EXGH-AUD-0001,EXGH-AUD-0088,88,EXAMPLE_audit_log.csv,2030-06-10,Y,EXAMPLE: shows op-note addendum filed days after surgery
+DOC-0007,EXAMPLE Rehab Center,certified,REQ-003,complete chart,EX-ENC-02,2030-03-15,2030-03-24,EXRC-0001,EXRC-0198,198,EXAMPLE_rehab_chart.pdf,2030-05-28,Y,EXAMPLE fictional row
